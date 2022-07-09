@@ -1,0 +1,33 @@
+
+
+Test 1:
+Results for the extraLargeArray
+insert 985.574843 ms
+append 30.486237 ms
+
+Test 2:
+Results for the largeArray
+insert 8.673822 ms
+append 923.269 μs
+
+Test 3: 
+Results for the mediumArray
+insert 887.603 μs
+append 189.354 μs
+
+Test 4:
+Results for the smallArray
+insert 53.205 μs
+append 107.848 μs
+
+Test 5:
+Results for the tinyArray
+insert 123.627 μs
+append 113.426 μs
+
+Notes:
+
+Because .unshift() starts at the beginning of an array, it "has to increment all the elements that already present in the Array. push() has to insert an element at the end of the array, so none of the Array elements' index has to change." Source="https://stackoverflow.com/questions/12250697/time-complexity-of-unshift-vs-push-in-javascript#:~:text=The%20default%20Complexity%20of%20push,elements'%20index%20has%20to%20change."
+Due to this, using the unshift() method takes just a tad bit longer than using the .push() method. Therefore it would be better to use the .push() tool in certain instances.
+
+The larger the number, the longer the result would take to test. hoever the result different between tinyArray and smallArray are a bit strange as the tinyArray did take longer to return a result.
