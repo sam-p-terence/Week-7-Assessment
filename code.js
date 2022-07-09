@@ -1,6 +1,6 @@
 
 
-//Add to Sum
+// 1) Sum Zero
 
 // let array = []
 // let array = [1]
@@ -22,10 +22,28 @@ for (let i = 0; i < array.length; i++) {
 // console.log(value)
 
 
+/////////////////////////////////////////////
+
+// 2) Unique Cahracters
 
 
+function hasUniqueChars(word) {
+    let uniqueChars = new Set([])
+    for (let i = 0; i < word.length; i++) {
+      uniqueChars.add(word[i])
+    }
+    return uniqueChars.size === word.length
+  }
 
-//Is the sentence a Pangram
+// console.log(hasUniqueChars("Iconoclastic"))
+// console.log(hasUniqueChars("Monday"))
+// console.log(hasUniqueChars("Tuesday"))
+
+
+/////////////////////////////////////////////
+
+
+// 3) Pangram Sentences
 
 function isPangram(string){
     let strArr = string.toLowerCase();
@@ -43,9 +61,10 @@ function isPangram(string){
 //   console.log(isPangram("I like cats, but not mice"))
 
 
+/////////////////////////////////////////////
 
 
-//Find the longest word
+// 4) Pangram Sentence
 
 len = ["Hello", "University", "Presidential"]
 
@@ -59,4 +78,4 @@ function findLongestWord(arr) {
     return len
   }
 
-  console.log(findLongestWord(len))
+//   console.log(findLongestWord(len))
